@@ -4,7 +4,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url .",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
@@ -17,7 +17,5 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   },
-  "homepage": "https://10se-rr.github.io/SSAFY-WINTER-AI-5",
-  "main": "tailwind.config.js",
-  "description": ""
+  "homepage": "https://10se-rr.github.io/SSAFY-AI-5-FE"
 }
