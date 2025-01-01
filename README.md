@@ -10,4 +10,4 @@
 2. `npx tailwindcss init`
 3. tailwind.config.js 수정을 통해 어디에 tailwind를 적용할지 정함
 4. postcssrc.json 수정
-`pip install -r requirements.txt`
+5. `pip install -r requirements.txt`
