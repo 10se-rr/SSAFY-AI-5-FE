@@ -1,7 +1,6 @@
 const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
-const apiSelector = document.getElementById("api-selector");
 
 // API_ENDPOINT
 const BASE_URL = process.env.API_ENDPOINT;
@@ -65,7 +64,7 @@ function scrollToBottom() {
 
 // Fetch assistant response from the backend
 async function getAssistantResponse(userMessage) {
-  const mode = apiSelector.value;
+  const mode = "assistant";
   const url =
     mode === "assistant" ? `${BASE_URL}/assistant` : `${BASE_URL}/chat`;
 
