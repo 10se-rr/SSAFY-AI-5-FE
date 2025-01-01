@@ -1,6 +1,10 @@
 const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
+const apiSelector = document.getElementById("api-selector");
+
+// API_ENDPOINT
+const BASE_URL = process.env.API_ENDPOINT;
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
@@ -61,7 +65,11 @@ function scrollToBottom() {
 
 // Fetch assistant response from the backend
 async function getAssistantResponse(userMessage) {
-  const response = await fetch("http://localhost:8000/chat", {
+  const mode = apiSelector.value;
+  const url =
+    mode === "assistant" ? `${BASE_URL}/assistant` : `${BASE_URL}/chat`;
+
+  const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
